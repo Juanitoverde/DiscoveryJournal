@@ -106,6 +106,7 @@ Thats really it, sort of. So what can we use with this ...
 Heres the break down of 5 different codes (valid)
 
 % = INT 1,2,3,4,5,6,7,8,9,0 
+
 , = Char a,b,c,d,e,f,g,h,i,j,k...x,y,z (you get the point)
 
 With enough data, we could elimiante what characters aren't being used. We could also determine if characters like "O" would be ignored and instead replaced with "0". Information like this can make generating a wordlist that much more realistic. But we don't have enough data to get that far into things. So heres what we got.
@@ -113,48 +114,72 @@ With enough data, we could elimiante what characters aren't being used. We could
 Converting the other codes I had into masks using **% and ,** we can start looking at them a bit more closely
 
 1# **, , , , , % % % , , ,**
+
+
 2# **% % % , % , , % , % %**
+
 3# **, % % , % , , , , , ,**
+
 4# **% , , , % % % % , % %**
+
 5# **, % % , , , , % % % ,**
 
 so lets now break it down to something hopefully we can use to be more effective in a wordlist / bruteforce mask
 What do we know for facts about each act code?
 
 1# **, , , , , % % % , , ,**
+   
    -- 8 Letters
+   
    -- 3 Numbers
+   
    -- This is not a free trial code, this is 1 month. 
+   
    -- 5letters, 3 numbers, 3 letters
    
 2# **% % % , % , , % , % %**
+   
    -- 4 Letters
+   
    -- 7 Numbers
+   
    -- 3 numbers, 1 letter, 1 number, 2 letters, 1 number, 1 letter, 2 numbers
    
 3# **, % % , % , , , , , ,**
+   
    -- 8 Letters
+   
    -- 3 numbers 
+
    -- 1 letter, 2 numbers, 1 letter, 1 number, 6 letters
    
 4# **% , , , % % % % , % %**
-    -- 7 Numbers
-    -- 4 Letters
-    -- 1 Number, 3 letters, 4 numbers,  1 letter, 2 numbers
+   
+   -- 7 Numbers
+   
+   -- 4 Letters
+
+   -- 1 Number, 3 letters, 4 numbers,  1 letter, 2 numbers
+
 5# **, % % , , , , % % % ,**
-    -- 6 Letters
-    -- 5 Numbers
-    -- 1 letter, 2 numbers, 4 letters, 3 numbers, 1 letter
+
+   -- 6 Letters
+
+   -- 5 Numbers
+
+   -- 1 letter, 2 numbers, 4 letters, 3 numbers, 1 letter
     
  We based on this, we can see the following (again, this isn't accurate and every code found can easily prove this wrong. Not enough data to determine the accuracy of this currently.(
  
  **8 Characters are common for being "Letters" in 2 codes -- same with 3 being numbers**
+ 
  1# **, , , , , % % % , , ,**
+
 3# **, % % , % , , , , , ,**
  
  Notice anything else smiliar? 
  
-**Not really, nothing we ca eally say with high accuracy at least. Between these two , the letters can be seen in groups of 5,3,6, and a couple times alone**
+**Not really, nothing we can really say with high accuracy at least. Between these two , the letters can be seen in groups of 5,3,6, and a couple times alone**
 
 2# **% % % , % , , % , % %**
 4# **% , , , % % % % , % %**
