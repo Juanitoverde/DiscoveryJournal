@@ -1,5 +1,6 @@
 *This will be my 1st "write-up", and I appreciate everyone for taking time to read it. I am new to contributing content of any type, and would appreciate any suggestions, advice, or guidance if you see something I should be aware of -- please notify me. Thank you.*
 
+**How I abuse API's and force them to provide free phone service, ***the easy way***
 
 Let’s begin by introducing myself and to add some clarification on how this came about. I prefer to call myself **JuanitoVerde**, someone who has always been interested in how things work; throughout the years this has caused me to break many things beyond repair. 
 One lovely thing about API’s , they’re usually not going to break or become damaged physically after I’m done with it, I hope. Secondly, at least you can patch code — you can’t patch circuit boards after you give them to me. 
@@ -13,6 +14,9 @@ https://my.mintmobile.com/activation
 Being the person I am, we know I just like to know how things work. *What do I do?* I obviously do everything in my power to break this thing, just kidding. **I decide to inspect the page** source and look at the html source code, see what files are being linked, what resources are being used, where these files are located, and mentally mapping the file folder system and keeping mental notes of things that look interesting. I feel like a kid in a candy store, but no candy… where is my act code being sent to? 
 
 I sometimes have bad vision staring at a screen so often, I probably over looked it. So let’s make things easier, ***right click > inspect*** (this is where the fun really starts. Hold on tight )
+
+-- i plan to add pictures -- --so here's me for example, as if i was talking about a picture that should be here --.
+
 
 It’s such a lovely thing, isn’t it ? Organized and full of interesting things to question — something we don’t have in common, but they do say opposites attract .
 
@@ -28,12 +32,12 @@ https://w3b-api.ultramobile.com/v2/mint/sims?actCode=DDEJC317JEF
 
 So let's just see whats going on here..
 
-***"deliveryType": "PHYSICAL", ## I'm sure this means physical card...
+**"deliveryType": "PHYSICAL", ## I'm sure this means physical card...
    "id": "890126089711559827", ## The '89' tells me it's the SIM's ICCID # .. Which may be helpful.
    "masterAgent": 745, ## Unsure.. Maybe the Warehouse Code or Main Seller? I don't know. 
    "distributor": 837, ## Target? Or The Store I got the code from.
    "initialProductId": 7000239, ## "Product ID" not sure what "initial" is suppose to be refering to..
-   "productType": "ECOMM" ## I wonder what otehr types they have? ECOMM = Ecommerece I'm guessing aswell. ***
+   "productType": "ECOMM" ## I wonder what otehr types they have? ECOMM = Ecommerece I'm guessing aswell.**
   
 Im going to assume that the long token is base64. I hope I'm right. -- edit, i was wrong. JWT Token https://devtoolzone.com/decoder/jwt did a better job.
 
@@ -42,8 +46,11 @@ Im going to assume that the long token is base64. I hope I'm right. -- edit, i w
 That gave me..
 
 **{
-  "gen3Token" : "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJicmFuZCI6Ik1JTlQiLCJicmFuZFR5cGUiOiJJTlRFUk5BTCIsImV4cCI6MTY1NzYzNTUwNiwiaWRzIjp7Ijc0MzgwNzUiOnsiZnVsbCI6dHJ1ZX19LCJuYmYiOjE2NTc2MzE2MDYsIm9yaWdpbiI6NzQzODA3NSwidXNlckVudiI6IlBST0QifQ.Rmdny37u2fu7OkJTLxra_R0_41-aErBMbsqAjZrHCW0-EfU9lJ9I39F8sy-z36iQ8pDSuxIrrPKpENDB9xW4dTX213vedsyYcZ8PcPpAnAgoUNqt4kxgV2d2nIBalMWPXGcWwUCI8zBOxESfkG2huRvt_dO3RtTPJpvThcbx4l5L3iVq320BHypvZOdZPYkxy17yjzHEyXN_lKaRt0oMI_Io7bgmcXNsEpLaVLdD288wjs33jdrSVSdfQ__457fS4MMXFvhuA7DyCvsM5zbqBxK-ySUKYO_g_8_H2R-R7oZazrK0aNWjyi7Hpq8_21yycTILKO8flOQ_Oovxam35nw",
-  "userId" : 7438075,
+  "gen3Token" : "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJicmFuZCI6Ik1JTlQiLCJicmFuZFR5cGUiOiJJTlRFUk5BTCIsImV4cCI6MTY1NzYzNTUwNiwiaWRzIjp7Ijc0MzgwNzUiOnsiZnVsbCI6dHJ1ZX19LCJuYmYiOjE2NTc2MzE2MDYsIm9yaWdpbiI6NzQzODA3NSwidXNlckVudiI6IlBST0QifQ.Rmdny37u2fu7OkJTLxra_R0_41-aErBMbsqAjZrHCW0-EfU9lJ9I39F8sy-z36iQ8pDSuxIrrPKpENDB9xW4dTX213vedsyYcZ8PcPpAnAgoUNqt4kxgV2d2nIBalMWPXGcWwUCI8zBOxESfkG2huRvt_dO3RtTPJpvThcbx4l5L3iVq320BHypvZOdZPYkxy17yjzHEyXN_lKaRt0oMI_Io7bgmcXNsEpLaVLdD288wjs33jdrSVSdfQ__457fS4MMXFvhuA7DyCvsM5zbqBxK-ySUKYO_g_8_H2R-R7oZazrK0aNWjyi7Hpq8_21yycTILKO8flOQ_Oovxam35nw",**
+  
+ (Seperating the output, looks less messy)
+ 
+  **"userId" : 7438075,
   "ICCID" : "890126089711559827",
   "brand" : "mint",
   "ip" : "192.241.198.127",
@@ -102,4 +109,124 @@ Heres the break down of 5 different codes (valid)
 , = Char a,b,c,d,e,f,g,h,i,j,k...x,y,z (you get the point)
 
 With enough data, we could elimiante what characters aren't being used. We could also determine if characters like "O" would be ignored and instead replaced with "0". Information like this can make generating a wordlist that much more realistic. But we don't have enough data to get that far into things. So heres what we got.
+
+Converting the other codes I had into masks using **% and ,** we can start looking at them a bit more closely
+
+1# **, , , , , % % % , , ,**
+2# **% % % , % , , % , % %**
+3# **, % % , % , , , , , ,**
+4# **% , , , % % % % , % %**
+5# **, % % , , , , % % % ,**
+
+so lets now break it down to something hopefully we can use to be more effective in a wordlist / bruteforce mask
+What do we know for facts about each act code?
+
+1# **, , , , , % % % , , ,**
+   -- 8 Letters
+   -- 3 Numbers
+   -- This is not a free trial code, this is 1 month. 
+   -- 5letters, 3 numbers, 3 letters
+   
+2# **% % % , % , , % , % %**
+   -- 4 Letters
+   -- 7 Numbers
+   -- 3 numbers, 1 letter, 1 number, 2 letters, 1 number, 1 letter, 2 numbers
+   
+3# **, % % , % , , , , , ,**
+   -- 8 Letters
+   -- 3 numbers 
+   -- 1 letter, 2 numbers, 1 letter, 1 number, 6 letters
+   
+4# **% , , , % % % % , % %**
+    -- 7 Numbers
+    -- 4 Letters
+    -- 1 Number, 3 letters, 4 numbers,  1 letter, 2 numbers
+5# **, % % , , , , % % % ,**
+    -- 6 Letters
+    -- 5 Numbers
+    -- 1 letter, 2 numbers, 4 letters, 3 numbers, 1 letter
+    
+ We based on this, we can see the following (again, this isn't accurate and every code found can easily prove this wrong. Not enough data to determine the accuracy of this currently.(
+ 
+ **8 Characters are common for being "Letters" in 2 codes -- same with 3 being numbers**
+ 1# **, , , , , % % % , , ,**
+3# **, % % , % , , , , , ,**
+ 
+ Notice anything else smiliar? 
+ 
+**Not really, nothing we ca eally say with high accuracy at least. Between these two , the letters can be seen in groups of 5,3,6, and a couple times alone**
+
+2# **% % % , % , , % , % %**
+4# **% , , , % % % % , % %**
+
+**Also, 7 numbers are comon here, 4 letters..**
+
+Hmm, maybe this would be more beneficial to use. Save some time..
+
+1# **, , , , , % % % , , ,**
+2# **% % % , % , , % , % %**
+3# **, % % , % , , , , , ,**
+4# **% , , , % % % % , % %**
+5# **, % % , , , , % % % ,**
+
+Space 1 = 3/5 Times a Letter
+Space 2 = 3/5 Times a Number
+Space 3 = 3/5 Times A Number
+Space 4 = ALWAYS A LETTER..
+Space 5 = 3/5 Times a Number
+Space 6 = 3/5 Times a Letter
+Space 7 = 3/5 Times a Letter.
+Space 8 = 4/5 Times a Number
+Space 9 = 4/5 Times a Letter
+Space 10= 3/5 Times a Number
+Space 11 = 3/5 Times a Letter
+
+Meaning based on this alone, a mask seems to be something like
+
+**, % % , % , , % , % ,**
+
+What do we notice in this? Well it shows us the same amount of numbers and letters as code #5 did.
+
+But it kinda will end there for now, not because thats all we can conclude. No if we remove the 1st code knowing its a a 1 month code while the other 4 are 1 week trails. We would  have a lot more reliable information to determine things.
+
+But this is mainly to show you how with enough data, you can create something more effective.  ANd how with little data, you probably wont be effective. 
+
+So lets just say a good key space to go with based on this information would be 
+
+**, % % , % , , % , % ,**
+
+Lets open up a tool to generate a wordlist based on this.
+
+***crunch -h***
+
+**crunch 11 11 -t ,%%,%,,%,%, >> mintmobilecodesmaybe.lst**
+
+that will generate a .lst file (basically a text file) full of every combination with that mask. The file will be called "mintmobilecodesmaybe.lst"
+
+So the next step is to try it out. This may take some playing around with but for example, you would use a fuzzing software like dirb.
+
+***dirb -h***
+
+now with this you would want to run something like this.
+
+**dirb https://w3b-api.ultramobile.com/v2/mint/sims?actCode= ./mintmobilecodesmaybe.lst** 
+
+Remember, we know that on invalid codes, its a 404. So we can filter using dirb and onyl show codes when they're valid.
+
+***So now, how is this even useful? What is the purpose of this.. If we don't have the SIM Card matching the ICCID, we cant use these codes.***
+
+**Well, this is where you get creative. I am writing this for pure infromation, its up to you to do what you will with it. I wrote this to show how you should always wonder how things work, tinker with things and explore. Theoredically you have all the information needed to call up mint. and provide a list of sim cards that 'dont work' and you would like a replacement. I'm sure mint would  replace a card if you know all the details that are provided by the correct response of a valid code. You can even social engineer possibly to say your the store based on the distributor # it provides. You can determine even what card you're claiming to be invalid by the 
+product ID i'm sure. **
+
+**I'm in no way encouraging you to use this with any malicious intent. I am simply providing an example of how this could be used agaisnt a company. Why API's should be secure, and so on. etc..**
+
+**More importantly, I want to encourage the community to always think about these things, maybe you can discover something interesting just by trying out what others may not even consider. Was this worth my time? Yes I found it interesting, I learned different things today. I learned about JWT when decoding the response. I learned a bit mroe about API's, hey I even learned how to post my 1st github page.**
+
+**Thank you for reading. I want to thank everyone who I mentioned, and if I didn't mention you, I apologize. -- MINT MOBILE, ULTRA MOBILE, https://devtoolzone.com/decoder/jwt, google, dirb, and crunch & its creaetors / dev's & team overall.**
+
+Here's a freebie... 
+**PS: Ultra Mobile only uses #'s no Letters in there ACT codes... Meaning your accuracy of success is probably a lot more realistic. with ultra act codes..**
+
+
+
 
