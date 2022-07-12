@@ -29,21 +29,77 @@ https://w3b-api.ultramobile.com/v2/mint/sims?actCode=DDEJC317JEF
 So let's just see whats going on here..
 
 ***"deliveryType": "PHYSICAL", ## I'm sure this means physical card...
-   "id": "890126089711559827", ## The '89' tells me it's the SIM's IMEI # .. Which may be helpful.
+   "id": "890126089711559827", ## The '89' tells me it's the SIM's ICCID # .. Which may be helpful.
    "masterAgent": 745, ## Unsure.. Maybe the Warehouse Code or Main Seller? I don't know. 
    "distributor": 837, ## Target? Or The Store I got the code from.
    "initialProductId": 7000239, ## "Product ID" not sure what "initial" is suppose to be refering to..
    "productType": "ECOMM" ## I wonder what otehr types they have? ECOMM = Ecommerece I'm guessing aswell. ***
   
-Im going to assume that the long token is base64. I hope I'm right.
+Im going to assume that the long token is base64. I hope I'm right. -- edit, i was wrong. JWT Token https://devtoolzone.com/decoder/jwt did a better job.
+
 ***"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJnZW4zVG9rZW4iOiJleUpoYkdjaU9pSlNVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKaWNtRnVaQ0k2SWsxSlRsUWlMQ0ppY21GdVpGUjVjR1VpT2lKSlRsUkZVazVCVENJc0ltVjRjQ0k2TVRZMU56WXpOVFV3Tml3aWFXUnpJanA3SWpjME16Z3dOelVpT25zaVpuVnNiQ0k2ZEhKMVpYMTlMQ0p1WW1ZaU9qRTJOVGMyTXpFMk1EWXNJbTl5YVdkcGJpSTZOelF6T0RBM05Td2lkWE5sY2tWdWRpSTZJbEJTVDBRaWZRLlJtZG55Mzd1MmZ1N09rSlRMeHJhX1IwXzQxLWFFckJNYnNxQWpackhDVzAtRWZVOWxKOUkzOUY4c3ktejM2aVE4cERTdXhJcnJQS3BFTkRCOXhXNGRUWDIxM3ZlZHN5WWNaOFBjUHBBbkFnb1VOcXQ0a3hnVjJkMm5JQmFsTVdQWEdjV3dVQ0k4ekJPeEVTZmtHMmh1UnZ0X2RPM1J0VFBKcHZUaGNieDRsNUwzaVZxMzIwQkh5cHZaT2RaUFlreHkxN3lqekhFeVhOX2xLYVJ0MG9NSV9JbzdiZ21jWE5zRXBMYVZMZEQyODh3anMzM2pkclNWU2RmUV9fNDU3ZlM0TU1YRnZodUE3RHlDdnNNNXpicUJ4Sy15U1VLWU9fZ184X0gyUi1SN29aYXpySzBhTldqeWk3SHBxOF8yMXl5Y1RJTEtPOGZsT1FfT292eGFtMzVudyIsInVzZXJJZCI6NzQzODA3NSwiSUNDSUQiOiI4OTAxMjYwODk3MTE1NTk4MjciLCJicmFuZCI6Im1pbnQiLCJpcCI6IjE3Mi4yNDguNDYuMTgiLCJpYXQiOjE2NTc2MzE5MDYsIm5iZiI6MTY1NzYzMTkwNiwiZXhwIjoxNjU3NjMyODA2LCJpc3MiOiJVTFRSQSJ9.bZbhC_kQGftQ5v1Qilu6oCytNcJISOEsSns1lZnijLw"***
 
-**eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJicmFuZCI6Ik1JTlQiLCJicmFuZFR5cGUiOiJJTlRFUk5BTCIsImV4cCI6MTY1NzYzNjIzMSwiaWRzIjp7Ijc0MzgwNzUiOnsiZnVsbCI6dHJ1ZX19LCJuYmYiOjE2NTc2MzIzMzEsIm9yaWdpbiI6NzQzODA3NSwidXNlckVudiI6IlBST0QifQ**
+That gave me..
 
-Well, Now I’m curious. Why? So I pop open my cellular device, tell Siri to ring up my good old pal Ryan Reynolds and see what’s going on here. Well unfortunately, Siri doesn’t have that contact in my phone book and Ryan Reynolds probably doesn’t even know who I am. Not yet at least. *if you’re reading this Mr. Reynolds, I appreciate you. You’re awesome. I don’t mean any harm or intend for any disrespect. Thank you!*
+**{
+  "gen3Token" : "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJicmFuZCI6Ik1JTlQiLCJicmFuZFR5cGUiOiJJTlRFUk5BTCIsImV4cCI6MTY1NzYzNTUwNiwiaWRzIjp7Ijc0MzgwNzUiOnsiZnVsbCI6dHJ1ZX19LCJuYmYiOjE2NTc2MzE2MDYsIm9yaWdpbiI6NzQzODA3NSwidXNlckVudiI6IlBST0QifQ.Rmdny37u2fu7OkJTLxra_R0_41-aErBMbsqAjZrHCW0-EfU9lJ9I39F8sy-z36iQ8pDSuxIrrPKpENDB9xW4dTX213vedsyYcZ8PcPpAnAgoUNqt4kxgV2d2nIBalMWPXGcWwUCI8zBOxESfkG2huRvt_dO3RtTPJpvThcbx4l5L3iVq320BHypvZOdZPYkxy17yjzHEyXN_lKaRt0oMI_Io7bgmcXNsEpLaVLdD288wjs33jdrSVSdfQ__457fS4MMXFvhuA7DyCvsM5zbqBxK-ySUKYO_g_8_H2R-R7oZazrK0aNWjyi7Hpq8_21yycTILKO8flOQ_Oovxam35nw",
+  "userId" : 7438075,
+  "ICCID" : "890126089711559827",
+  "brand" : "mint",
+  "ip" : "192.241.198.127",
+  "iat" : 1657631906,
+  "nbf" : 1657631906,
+  "exp" : 1657632806,
+  "iss" : "ULTRA"
+}**
+
+Okay so lets see what that gen3Token is .. I'm assuming again, JWT and HS256 have something to do with it...
+
+**{
+  "brand" : "MINT",
+  "brandType" : "INTERNAL",
+  "exp" : 1657635506,
+  "ids" : {
+    "7438075" : {
+      "full" : true
+    }
+  },
+  "nbf" : 1657631606,
+  "origin" : 7438075,
+  "userEnv" : "PROD"
+}**
+
+
+& Thats about that.  It looks like it repeated its information 3x for the most part. I wonder why? Seems uneeded. 
+
+Well, Now I’m curious. Why? Why is the API On Ultra? So I pop open my cellular device, tell Siri to ring up my good old pal Ryan Reynolds and see what’s going on here. Well unfortunately, Siri doesn’t have that contact in my phone book and Ryan Reynolds probably doesn’t even know who I am. Not yet at least. *if you’re reading this Mr. Reynolds, I appreciate you. You’re awesome. I don’t mean any harm or intend for any disrespect. Thank you!*
 
 So now just form assumptions. We know T-Mobile and these providers have smaller companies such as Mint and Ultra and others we don’t need to name, that for a lack of better terms, “piggy back” off there network and cell towers. These companies can provide us quality service at better rates , and In reality the only difference it seems to me is sacrificing “priority” of service. Meaning, tor 80$ a month, you get to load YouTube videos faster then me at the airport. Not a problem, I don’t have money to fly anywhere anyways. 
 
 So I’m assuming mint is doing the same or has a contract with ultra ? It looks like the sites damn near operate the same or have the same developers. Maybe they just use there developers and this was a productive and cost efficient way of handling the web aspect of things. I don’t know. 
 
 We can now blame ultra mobile and not Deadpool for what’s about to come, right? We can blame the awesome information that is given upon the right code being supplied. What a nice detailed xml report. 
+
+***SO WHAT IS ABOUT TO COME? HOW IS ANY OF THIS INFORMATION USEFUL?***
+
+Well, theoredically I have all the information needed to brute force a list of legitiamte SIM Activation Codes..
+
+I don't want to get to deep into the whole "key space" thing, as I don't want to missinform anyone. 
+
+What I know is that, computers don't really generate anything at 100% Random. Meaning, you can with enough data, determine how a code is generated. With that , you can create a mask of the keyspace **hopefully I'm using that word right** -- and have a highly effective and successful attack to generate valid codes.
+
+So remember, what I'm about to show is most likely very *useless* by itself. This is based off of VERY LIMITED information. I would just like to explain how this can potentialy be something used to be more effective with enogh data.
+
+What we know: (facts)
+
+1) A String with the length **11 Chars &/ INT**  = ACT Code  
+
+Thats really it, sort of. So what can we use with this ...
+
+Heres the break down of 5 different codes (valid)
+
+% = INT 1,2,3,4,5,6,7,8,9,0 
+, = Char a,b,c,d,e,f,g,h,i,j,k...x,y,z (you get the point)
+
+With enough data, we could elimiante what characters aren't being used. We could also determine if characters like "O" would be ignored and instead replaced with "0". Information like this can make generating a wordlist that much more realistic. But we don't have enough data to get that far into things. So heres what we got.
+
