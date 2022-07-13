@@ -1,6 +1,12 @@
+* reported to mint mobile immediately after this was published. Wed July 13th 2022 to the awesome associate Jay who helped me submit this to the correct team to fix. 
+* Mint, I looked for a bug bounty program I didn't find one for you guys. Would be awesome if you could offer one in the future. 
+
 *This will be my 1st "write-up", and I appreciate everyone for taking time to read it. I am new to contributing content of any type, and would appreciate any suggestions, advice, or guidance if you see something I should be aware of -- please notify me. Thank you.*
 
-**How I abuse API's and force them to provide free phone service, ***the easy way***
+
+
+"How I abuse API's and force them to provide free phone service, ***the easy way***"
+This is a joke by the way. I never actually abused your service. I hope you (mint mobile and ultra mobile) can see the humor in this. No API's were hurt. 
 
 Let’s begin by introducing myself and to add some clarification on how this came about. I prefer to call myself **JuanitoVerde**, someone who has always been interested in how things work; throughout the years this has caused me to break many things beyond repair. 
 One lovely thing about API’s , they’re usually not going to break or become damaged physically after I’m done with it, I hope. Secondly, at least you can patch code — you can’t patch circuit boards after you give them to me. 
@@ -242,6 +248,16 @@ Remember, we know that on invalid codes, its a 404. So we can filter using dirb 
 
 **Well, this is where you get creative. I am writing this for pure infromation, its up to you to do what you will with it. I wrote this to show how you should always wonder how things work, tinker with things and explore. Theoredically you have all the information needed to call up mint. and provide a list of sim cards that 'dont work' and you would like a replacement. I'm sure mint would  replace a card if you know all the details that are provided by the correct response of a valid code. You can even social engineer possibly to say your the store based on the distributor # it provides. You can determine even what card you're claiming to be invalid by the 
 product ID i'm sure. **
+
+This would be significantly deviating to a companies finances if used in a manner to actually abuse these services. 
+This is just scratching the surface. 
+
+Hypothetically, if abused. 1 month ultra mobile 15gb is 39$ USD
+39 x 12 = 468$ for a year's worth of service. 
+With the potential to brute force these in bulk, 
+10 individuals gaining free service for a year with this would equate to 4,680$ in profit loss.
+This is deviating to any company and imagine how many users would take advantage of this. 
+A lot more then 10 I'm sure. 
 
 **I'm in no way encouraging you to use this with any malicious intent. I am simply providing an example of how this could be used agaisnt a company. Why API's should be secure, and so on. etc..**
 
