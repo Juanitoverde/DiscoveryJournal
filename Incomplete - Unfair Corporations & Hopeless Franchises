@@ -1,44 +1,43 @@
 ###########################################################################
 ###############                                           #################
 ###############                                           #################
-# TITLE: How We All Can Learn From Mistakes, Even A $160B Dollar Company. #
+# TITLE: Shipped To Ship Wrecked -- Why Fatal Mistakes Still Are Relevant #
 ###############                                           #################
 ###############                                           #################
 ###########################################################################
-{name of franchise} & OTHER DATA WILL NOT BE PUBLISHED YET
+{Names / URLS / etc.. Are Removed Until Officially Reported)
 ###########################################################################
 
 
-Dear, {name of franchise(s) & Owners}
+I have discovered a few fatal flaws in a specific website. This website isn't some small time Cowboy in this Wild Wild West.
 
-    The Corporate behind you, overseeing everything you do, taxing everything they can, who has disappointed you endlessly; needs to wake up and ensure your
-    business is as secure as their salary and profit margins are. I am writing this to make everyone aware how important security is, and how important
-    every aspect of your business is when it involves security. This includes business partners, relations, and any affiliates.
-    
-    To all Franchise Owner(s), there are a few amazing things that I respect from each and every one of you. You are all Small Buisnesses
-    making your footprint in this world. You are helping a community, that helps serve a the bigger picture in the ever-growing world.
-    You are bigger then anyone realizes, even bigger then the Corporate realizes. So why are they not taking the same steps they take
-    to secure themselves? Why do they not make the same financial investment into your security? A semi-annual District Manager
-    handing over a few PDF Documents via e-Mail is not the investment you deserve.
-    
-    You pay royalties, you pay for the clothing your employees wear, you pay for software usage, you pay for everything, from the computers
-    you use, to the branding on your back, you put their brand on the property you rent just to have a store. The costs that purely
-    benefit corporate aren't ever put back into your community, they're not put back into your stores. No, they're put into the
-    current $160B net worth evaluation, into the pockets of those who don't know what it is to serve a community on a day to day
-    basis.
-    
-    This write up isn't for me, or you store Owners. I'm not doing this to make myself feel as I have helped anyone out. I am not writing this to
-    feel as if I did a justice for store owners. I'm writing this to show how franchises can ruin a Corporation, as fast as they built the franchise name.
-    How maybe, just maybe... Putting money into these franchises, should be a main point of focus for your security, and for the security of your 
-    Corporation overall. Remember, The Bigger They Are, The Harder They Fall...
-    
-    I'll leave this last comment as I finish the full write up, A Chain is Only as Strong as It's Weakest Link. Don't forget about the franchise chains, Mr. Corporate.
-    
-    
-                                                       Forever Yours,
-                                                              The Negative Man Who Just Wants Positive Changes
-                                               |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||                
-                                               ps. Weakness Creates Strength. This is only to benefit not to harm. 
-          | |                                 | |                                 | |                                 | |                                 | |                                 |
-    "I Got The Number 13 Tatooed On My Neck. When The Ink Starts To Itch The Black Will Turn To Red"
-                                     
+I will be documenting my research here. This is to show how turning a blind eye to bad security habbits for 20+ years, will ensure 
+everyone around you doesn't see the flaws hiding in plain site.
+
+I will go over a few PoC's I am working on, A few vital information disclosures, and overall the countless security mistakes 
+no body should make.
+
+This will be updated serveral times, until I have covered everything in depth. The more I uncover, the worse it gets,
+so I assume I will have to start this somewhere.
+
+====================
+
+1) There is no reason to show or provde ACCOUNT INFORMATION (even if that password is hashed...) just by a single HTTP Request...
+
+2) 1 Cookie Shouldn't be a 'VIP' Ticket backstage to EVERYONES Information. Especially when that Cookie isn't even an authenticated one.
+
+3) An Account Policy containing Password / Security Rules, or (sad I have to say htis..) SECURITY QUESTIONS, Owners Registration Information... & MORE.
+should not displayed or presented in such a way where it is open for the whole world to see...
+
+4) Security Quesions, should not be "1+1" for Administrative Accounts. Regardless of other secuity measures in place.. You're asking any kid in kindergarden
+to just ruin your day.
+
+5) USERNAMES SHOULD NOT BE YOUR PASSWORD.
+
+6) CHANING 1 WORD IN YOUR USERNAME -- SHOULD NOT MAKE IT OKAY TO BE A PASSWORD...
+
+7) USING "11111", "12345", "PASSWORD" -- SHOULD ALSO, NOT BE A PASSWORD FOR ANYONE IN THIS DAY AND AGE.
+
+8) A Security Policy, Enforcing Mixed Cases, Special Chars, Numbers, etc.. Should Be REQUIRED FOR EVERY ACCOUNT. NOT JUST 2 out of 5600+ 
+(are the other 5558 accounts just not good enough? If thwa was the case, why are admn accounts using 1+1 as a security question, but required to have a strict
+password policy?)
