@@ -26,17 +26,16 @@ so I assume I will have to start this somewhere.
 
 2) 1 Cookie Shouldn't be a 'VIP' Ticket backstage to EVERYONES Information. Especially when that Cookie isn't even an authenticated one.
 
-3) An Account Policy containing Password / Security Rules, or (sad I have to say htis..) SECURITY QUESTIONS, Owners Registration Information... & MORE.
+3) An Account Policy containing Password / Security Rules, or (sad I have to say this..) SECURITY QUESTIONS, Owners Registration Information... & MORE.
 should not displayed or presented in such a way where it is open for the whole world to see...
 
-4) Security Quesions, should not be "1+1" for Administrative Accounts. Regardless of other secuity measures in place.. You're asking any kid in kindergarden
-to just ruin your day.
+4) How security questions have answers, but those answers shouldn't be accessible or even viewable in plain text to anyone other then the user who made them.
 
-5) USERNAMES SHOULD NOT BE YOUR PASSWORD.
+5) If admin:password wasn't secure, _GUEST:PASSWORD probably isn't either. 
 
-6) CHANING 1 WORD IN YOUR USERNAME -- SHOULD NOT MAKE IT OKAY TO BE A PASSWORD...
+6) How a _GUEST can access your FTP Servers, and view sensitive information of your customers. 
 
-7) USING "11111", "12345", "PASSWORD" -- SHOULD ALSO, NOT BE A PASSWORD FOR ANYONE IN THIS DAY AND AGE.
+7) How does trust effect a stock.
 
 8) A Security Policy, Enforcing Mixed Cases, Special Chars, Numbers, etc.. Should Be REQUIRED FOR EVERY ACCOUNT. NOT JUST 2 out of 5600+ 
 (are the other 5558 accounts just not good enough? If thwa was the case, why are admn accounts using 1+1 as a security question, but required to have a strict
