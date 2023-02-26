@@ -1,0 +1,39 @@
+You could say I'm a fortune reader, not a fortune teller. 
+
+I can't tell you how long you'll have a fortune, but I can definetly read what has made you a fortune...
+
+Lets traversal our way back to 2008 where file systems were free, and insecure... shipexec.com ...
+
+Well before I begin, I'd like to simply put, I couldn't find any bug bountys for this part of UPS. It doesn't fall under the bug bounty I can find easily.
+
+This is the closest one:
+
+https://hackerone.com/ups/
+
+It obviously doesn't cover its other sites such as Connect Ship or Ship Exec, etc..
+
+I've attempted to reach out to different emails over at UPS but nothing. So I apologize for any feelings hurt, or moods disrupted, but maybe you spend part of that
+$186.5 billion dollar evaluation towards your companies security. All aspects, all corners, and all areas of your companies security...
+
+
+So now lets get to it.
+
+I first came across shipexec.com after looking into other companies owned by UPS wondering how extensive their reach is besides just "The UPS Store" brand is.
+It brought me to, https://www.shipexec.com/
+
+Clearly stated in the footer, with privacy notice being hyperlinked to the following url: https://www.ups.com/us/en/support/shipping-support/legal-terms-conditions/privacy-notice.page
+
+"Privacy Notice | Copyright © 2023 United Parcel Service of America, Inc. All rights reserved."
+
+We can safely assume they are UPS in every way shape or form.
+
+So what am I doing here? To learn. To wonder, and I do that frequently. What's first? Maybe I should take it slow, not break anything accidently and become
+the persistent a-hole we all know to well, who will just keep seeing how bad it gets before I can't fix the damage.
+
+Oh,
+Lovely, documentation. I do need some new reading material: https://www.shipexec.com/Info
+
+*boring* , never was much of a reader. I like images. NEXT.. https://docs.shipexec.com/wwwroot/Files/Current%20Version/ShipExec%20Release%20Notes.html
+
+*yawn* ... but hey I notice yall aren't shy at all with your folder system.... wwwroot , oh you're a tease aren't you girl?
+
